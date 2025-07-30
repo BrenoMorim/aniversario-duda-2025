@@ -1,0 +1,142 @@
+/* Paleta: preto (#000), roxo (#6A0DAD), vinho (#800020) */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', cursive;
+  background: linear-gradient(135deg, #6A0DAD, #800020);
+  color: #fff;
+  max-width: 100vw;
+  max-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.crown-emoji {
+  position: absolute;
+  top: -21px;
+  left: 50%;
+  transform: translateX(-50%) rotate(22deg);
+  font-size: 2.25rem;
+  z-index: 2;
+}
+
+.intro {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+}
+
+.intro h1 {
+  font-weight: 500;
+}
+
+.animated-emojis {
+  font-size: 2rem;
+  animation: floatEmojis 2s ease-in-out infinite;
+}
+
+@keyframes floatEmojis {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.compliments {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.25rem;
+  }
+}
+
+.compliment {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  box-sizing: border-box;
+  transition: all 250ms ease;
+}
+
+.compliment.full-bg {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.compliment:hover, .compliment:focus, .compliment:active {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .compliment {
+    font-size: 1.5rem;
+    height: 180px;
+    padding: 0 10px;
+  }
+  .compliment:hover, .compliment:focus, .compliment:active {
+    font-size: 2rem;
+  }
+}
+
+.ending {
+  text-align: center;
+  font-weight: 300;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.ending h3 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.ending p {
+  font-size: 1rem;
+}
+
