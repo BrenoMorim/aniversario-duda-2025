@@ -51,8 +51,14 @@ h1, h2 {
 
 .intro h1 {
   font-weight: 500;
+  font-size: 2rem;
 }
 
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 1.25rem;
+  }
+}
 .animated-emojis {
   font-size: 2rem;
   animation: floatEmojis 2s ease-in-out infinite;
@@ -138,6 +144,7 @@ h1, h2 {
 .ending h3 {
   font-size: 1.4rem;
   font-weight: 300;
+  margin-top: 0;
 }
 
 .ending p {
