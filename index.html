@@ -33,61 +33,61 @@
   <section class="compliments">
     <h2 class="section-title animate__animated animate__fadeInDown">Obrigado por ser essa pessoa</h2>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/amorosa.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/amorosa.jpg');">
       <p>AMOROSA</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/carinhosa.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/carinhosa.jpg');">
       <p>CARINHOSA</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/dedicada.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/dedicada.jpg');">
       <p>DEDICADA</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/branca-de-neve.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/branca-de-neve.jpg');">
       <p>DE BOM CORAÇÃO</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/divertida.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/divertida.jpg');">
       <p>DIVERTIDA</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/doce.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/doce.jpg');">
       <p>DOCE</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/esforcada.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/esforcada.jpg');">
       <p>ESFORÇADA</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/gentil.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/gentil.jpg');">
       <p>GENTIL</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/linda.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/linda.jpg');">
       <p>LINDA</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/incrivel.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/incrivel.jpg');">
       <p>INCRÍVEL</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/maravilhosa.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/maravilhosa.jpg');">
       <p>MARAVILHOSA</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/responsavel.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/responsavel.jpg');">
       <p>RESPONSÁVEL FINANCEIRAMENTE</p>
     </div>
 
-    <div class="compliment full-bg animate__animated observe" style="background-image: url('assets/vampire.jpg');">
+    <div class="compliment full-bg animate__animated observe hidden" style="background-image: url('assets/vampire.jpg');">
       <p>FORTE</p>
     </div>
 
   </section>
 
-  <section class="ending animate__animated observe">
+  <section class="ending animate__animated observe hidden">
     <h3>Espero que a senhora alcance todos os seus objetivos e que seja muito feliz 🌈</h3>
     <p>Obrigado por ser esse raio de sol que ilumina a vida de todos ao seu redor ☀️</p>
     <p>Aproveita bem o seu dia!</p>
@@ -96,6 +96,7 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          entry.target.classList.remove("hidden");
           const delay = entry.target.dataset.delay || '0s';
           entry.target.style.setProperty('--animate-delay', delay);
           entry.target.classList.add('animate__animated', 'animate__fadeInUp');
